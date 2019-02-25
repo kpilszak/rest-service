@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController {
 
-    @RequestMapping(method = RequestMethod.GET, path = "/hello/(name)")
+    @RequestMapping(method = RequestMethod.GET, path = "/hello/{name}")
     public String helloWorld(@PathVariable String name) {
         return String.format("Hello %s", name);
     }
