@@ -11,7 +11,7 @@ import javax.websocket.server.PathParam;
 public class HelloWorldController {
 
     @RequestMapping(method = RequestMethod.GET, path = "/hello")
-    public String helloWorld(@PathParam("name") String name) {
-        return String.format("Hello %s", name);
+    public String helloWorld(@PathParam("message") String message, @PathParam("name") String name) {
+        return new HelloWorld(message, name).toString();
     }
 }
