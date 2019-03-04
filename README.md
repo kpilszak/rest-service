@@ -1,1 +1,3 @@
 # rest-service
+
+mvn
